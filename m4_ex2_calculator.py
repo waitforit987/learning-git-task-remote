@@ -71,9 +71,11 @@ def division():
     while is_entering:
         logging.info("Distinction was chosen")
         x = input("\nEnter first digit - ")
+        logging.info(f"{x} was chosen")
         if x.isdigit():
             a = float(x)
             y = input("\nEnter second digit - ")
+            logging.info(f"{y} was chosen")
             if y.isdigit():
                 b = float(y)
                 result = a / b
@@ -87,17 +89,16 @@ def division():
 
 def choosing_operation():
     while True:
-        if choice.isdigit():
-            choice = input(
-                "Input correct number and choose operation: 1 addition, 2 subtraction, 3 multiplication, 4 division \n")
-            if choice == "1":
-                (addition())
-            if choice == "2":
-                (subtraction())
-            if choice == "3":
-                (multiplication())
-            if choice == "4":
-                (division())      
+        choice = input(
+            "Input correct number and choose operation: 1 addition, 2 subtraction, 3 multiplication, 4 division \n")
+        if choice == "1":
+            (addition())
+        if choice == "2":
+            (subtraction())
+        if choice == "3":
+            (multiplication())
+        if choice == "4":
+            (division())      
 
 
 logging.basicConfig(level=logging.DEBUG)
