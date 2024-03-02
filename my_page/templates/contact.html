@@ -1,0 +1,70 @@
+{% extends 'parent.html' %}
+
+
+{% block head %}
+	<link rel="stylesheet" href="{{ url_for('static', filename='second_style.css') }}">
+{% endblock %}
+
+{% block content %}
+	<h2>Contact</h2>
+    <ul> 
+		<li class="email">email: maciejdudzik90@gmail.com</li>
+		<li class="phone">phone: 500000000</li>
+    </ul>
+    <form action="/mypage/contact" method="post">
+        <textarea name="message"></textarea>
+		<button type="submit">Send</button>
+	</form>
+{% endblock %}	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <DOCTYPE html> -->
+<!-- <html lang="en"> -->
+  <!-- <head> -->
+    <!-- <meta charset="utf-8"> -->
+		<!-- <title>My first page</title> -->
+			<!-- <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> -->
+  <!-- </head> -->
+  <!-- <body> -->
+    <!-- <h1>Welcome to my home page</h1> -->
+    <!-- <img src="https://s.ciekawostkihistoryczne.pl/uploads/2019/03/Albert_Einstein_Head-340x340.jpg" alt="Screen of Einstein" title="Albert Einstein"> -->
+    <!-- <h2>Contact</h2> -->
+    <!-- <ul>  -->
+      <!-- <li class="email">email: maciejdudzik90@gmail.com -->
+      <!-- </li> -->
+      <!-- <li class="phone"> -->
+        <!-- phone: 500000000 -->
+      <!-- </li> -->
+    <!-- </ul> -->
+    <!-- <form action="/mypage/contact" method="post"> -->
+        <!-- <textarea name="message"></textarea> -->
+		<!-- <button type="submit">Send</button> -->
+	<!-- </form> -->
+  <!-- </body> -->
+<!-- <html> -->

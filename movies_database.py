@@ -129,7 +129,7 @@ def displaying_get_total_episodes(list_of_episodes):
             print(f"Skipping {series} as it's not an instance of Series")
 
 def main_program():
-    print("Movies databases")
+    print("Movies database")
     adding_movies("Forrest Gump", "1994", "Drama", 0)
     adding_movies("Good Will Hunting", "1997", "Drama", 0)
     adding_movies("Departed", "2006", "Action", 0)
