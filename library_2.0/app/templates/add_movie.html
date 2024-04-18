@@ -1,0 +1,19 @@
+{% extends "index.html" %}
+
+{% block content %}
+
+    <h1>Add movie to library</h1>
+    <form action="/add_movie" method="post">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+        <label for="name">Name of movie:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="production_year">Production Year:</label>
+            <input type="number" id="production_year" name="production_year" required>
+            <label for="director">Director:</label>
+            <input type="text" id="director" name="director" required>
+            <label for="lastname">Last Name:</label>
+            <input type="text" name="lastname" id="lastname">
+            <button type="submit">Add movie</button>
+    </form>
+
+{% endblock %}

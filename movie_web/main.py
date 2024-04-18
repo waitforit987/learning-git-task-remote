@@ -1,5 +1,5 @@
 import datetime
-
+import random
 from flask import Flask, render_template, request, url_for, redirect, flash
 import tmdb_client
 
@@ -22,11 +22,13 @@ def utility_processor():
         return tmdb_client.get_poster_url(path, size)
     return {"tmdb_image_url": tmdb_image_url}
 
-@app.route('/movie<movie_id>')
+@app.route("/movie/<movie_id>")
 def movie_details(movie_id):
     details = tmdb_client.get_single_movie(movie_id)
     cast = tmdb_client.get_single_movie_cast(movie_id)
-    return render_template("movie_details.html", movie=details, cast=cast)
+    movie_images = tmdb_client.get_movie_images(movie_id)
+    selected_backdrop = random.choice(movie_images['backdrops'])
+    return render_template("movie_details.html", movie=details, cast=cast, selected_backdrop=selected_backdrop)
 
 @app.route('/search')
 def search():
